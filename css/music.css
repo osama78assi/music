@@ -1,0 +1,408 @@
+:root {
+    --background-page: #f1f0f6;
+    --second-color: #f0f0f8;
+    --color: #5f5454;
+    --alt-color: #03A9F4;
+    --green-color: #28a745;
+    --box-shadow-one: -10px -11px 12px 0px #ffffffc2, 0px 0px 20px 20px #33333312;
+    --box-shadow-two: -10px -11px 14px 0px #ffffffc2, 0px 0px 20px 20px #33333312;
+}
+/* Normal Styling */
+body {
+    background-color: var(--background-page);
+}
+.bg-second {
+    background-color: var(--second-color);
+}
+.text-color {
+    color: var(--color);
+}
+.circul-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    height: 100vh;
+    width: 100%;
+}
+.main-1 {
+    height: 550px;
+    border-radius: 15px;
+}
+.sha-one {
+    box-shadow: var(--box-shadow-one);
+}
+.sha-two {
+    box-shadow: var(--box-shadow-two);
+}
+.pointer { 
+    cursor: pointer;
+}
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* Left Side */
+.logo h1 {
+    font-size: 25px;
+}
+[name='search-outline'],
+[name='logo-instagram'],
+[name='logo-facebook'],
+[name='logo-soundcloud'] {
+    color: white;
+}
+[name='musical-notes-outline'],
+[name='person-circle-outline'],
+[name='folder-outline'] {
+    color: var(--alt-color);
+    transition-duration: 0.1s;
+}
+.left-control div .circul-icon:hover {
+    background-color: var(--green-color);
+}
+.left-control div .circul-icon:hover ion-icon {
+    color: #fff;
+}
+.left-control div span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 600;
+}
+.left-control + div {
+    flex-direction: column;
+}
+/* Blinding Lights */
+.blinding .blinding-first {
+    position: relative;
+}
+.song {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.song h1{
+    width: fit-content;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--color);
+}
+.song span {
+    width: fit-content;
+    font-weight: 600;
+    color: var(--color);
+}
+.song p {
+    width: fit-content;
+    font-weight: 600;
+    font-size: 14px;
+    color: #8b7b7b;
+}
+.border-img {
+    position: relative;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: transparent;
+    border: 5px solid #ddd;
+    border-right-color: var(--alt-color);
+    transition-duration: 0.3s;
+    animation: swap 1s linear infinite;
+}
+@keyframes swap {
+    0% {
+        border-color: #ddd;
+        border-right-color: var(--alt-color);
+    }
+    25% {
+        border-color: #ddd;
+        border-bottom-color: var(--alt-color);
+    }
+    50% {
+        border-color: #ddd;
+        border-left-color: var(--alt-color);
+    }
+    75% {
+        border-color: #ddd;
+        border-top-color: var(--alt-color);
+    }
+}
+.border-img::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-image: url('../imgs/img-3.jpg');
+    background-size: cover;
+    box-shadow: 5px 5px 8px 0px #3333337d;
+}
+.image {
+    overflow: hidden;
+    position: relative;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.5s;
+}
+.image:hover img {
+    transform: scale(1.5);
+}
+.image img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background-color: transparent;
+    border: 5px solid;
+    border-color: #333;
+}
+.icon-play-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 50%;
+    background-color: var(--green-color) !important;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+.card-1 {
+    border-radius: 20px;
+}
+.card-1 .song-photo {
+    background-image: url('../imgs/img-2.jpg');
+    background-size: cover;
+}
+.card-1 div h3 {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+.card-1 div span {
+    font-weight: bold !important;
+    font-size: 11px;
+    color: var(--color);
+}
+[alt='sound'] {
+    width: 120px;
+}
+.card-1 div .icon-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding-left: 2px;
+    border-radius: 50%;
+    background-color: var(--green-color) !important;
+    color: white;
+    font-size: 20px;
+}
+.card-1 div .icon-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding-left: 2px;
+    border-radius: 50%;
+    color: var(--color);
+    font-size: 20px;
+}
+.card-1 div .icon-cont:hover {
+    color: var(--green-color);
+}
+.card-2 {
+    min-height: 200px;
+    transform: rotateX(30deg) translateY(15px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card-2 h3 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0;
+    color: var(--color);
+}
+.card-2 div .words {
+    font-size: 14px;
+    display: block;
+    color: var(--color);
+}
+.card-2 .fold {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: var(--background-page);
+    transition-duration: 0.5s;
+    box-shadow: -3px -3px 2px #ffffffbf, 3px 3px 3px 0px #00000047;
+}
+.card-2 .fold:hover {
+    background-color: var(--green-color);
+    color: #fff !important;
+}
+.card-2 .fold:hover [name='folder-outline'] {
+    color: #fff !important;
+}
+.card-2 .fold + span {
+    font-size: 13px;
+    color: var(--color);
+}
+.card-2 [name='folder-outline'] {
+    color: var(--color);
+}
+/* Profile */
+.profile .name {
+    font-weight: 600;
+}
+.profile .set,
+.profile .not {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+.profile .set [name='settings-outline'],
+.profile .not [name='notifications-outline'] {
+    font-size: 25px;
+}
+.profile .set:hover {
+    transform: rotate(90deg);
+}
+.profile .not::before {
+    content: "9";
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    color: #fff;
+}
+.download {
+    margin-top: 30px !important;
+}
+.download .down {
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.download .down-one {
+    height: 80px;
+    margin: 10px 0px !important;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+}
+.download .down-one .down-img {
+    background-image: url('../imgs/img-1.jpg');
+    background-size: cover;
+}
+.download .mission h3 {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    margin-bottom: 0 !important;
+    transition: 0.5s;
+}
+.download .mission span {
+    font-weight: bold !important;
+    font-size: 11px;
+    margin-top: 0 !important;
+    color: var(--color);
+    transition: 0.5s;
+}
+.download .control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+.download .control ion-icon {
+    font-size: 20px;
+    margin-top: 0.5px;
+    transition: 0.5s;
+}
+.download .down-one:hover {
+    background-color: var(--green-color) !important;
+}
+.download .down-one:hover .mission h3 ,
+.download .down-one:hover .mission span {
+    color: #fff !important;
+}
+@media (max-width: 992px) {
+    .main-1 {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    .logo {
+        margin-top: 10px !important;
+    }
+    .left-control {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .social {
+        flex-direction: row !important;
+        justify-content: space-evenly;
+    }
+    .blinding-first {
+        margin: 10px 0px !important;
+    }
+}
+@media (max-width: 768px) {
+    .left-control + div {
+        align-items: center !important;
+    }
+    .blinding-second {
+        margin-top: 20px;
+    }
+    .card-1 {
+        padding: 5px;
+    }
+    .card-1 div,
+    .card-1 img {
+        margin: 5px 0px !important;
+    }
+}
+@media (max-width: 375px) {
+    .des {
+        margin-left: 2px !important;
+    }
+}
